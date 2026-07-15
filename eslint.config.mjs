@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Plain Node.js CommonJS entry point for Node hosts (e.g. Hostinger);
+    // not part of the Next.js/TypeScript app source.
+    "server.js",
   ]),
 ]);
 

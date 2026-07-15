@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { AlertCircle, CheckCircle2, Loader2 } from "lucide-react";
 import { ButtonEl } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 import { Eyebrow, GradientBlobs } from "@/components/ui/gradient-blobs";
+import type { GrowthAuditPayload } from "@/lib/growth-audit";
 
 const marketplaces = ["Amazon", "Shopify", "TikTok Shop", "Multiple Marketplaces"];
 const revenueRanges = [
@@ -21,12 +22,33 @@ const fieldClasses =
 const labelClasses = "mb-2 block text-xs font-semibold uppercase tracking-wide text-mist-400";
 
 export function LeadForm({ compact = false }: { compact?: boolean }) {
-  const [status, setStatus] = useState<"idle" | "submitting" | "submitted">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "submitted" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
-    window.setTimeout(() => setStatus("submitted"), 900);
+
+    const formData = new FormData(e.currentTarget);
+    const payload = Object.fromEntries(formData.entries()) as unknown as GrowthAuditPayload;
+
+    try {
+      const res = await fetch("/api/growth-audit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
+
+      setStatus("submitted");
+    } catch (err) {
+      setErrorMessage(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+      setStatus("error");
+    }
   }
 
   if (status === "submitted") {
@@ -157,6 +179,13 @@ export function LeadForm({ compact = false }: { compact?: boolean }) {
           />
         </div>
       </div>
+
+      {status === "error" && (
+        <div className="mt-6 flex items-start gap-2 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+          <AlertCircle className="mt-0.5 size-4 shrink-0" />
+          {errorMessage}
+        </div>
+      )}
 
       <ButtonEl
         type="submit"
