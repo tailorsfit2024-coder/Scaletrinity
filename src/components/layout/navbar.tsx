@@ -56,14 +56,14 @@ export default function Navbar() {
                   href={link.href}
                   className={cn(
                     "relative rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200",
-                    active ? "text-white" : "text-mist-400 hover:text-white"
+                    active ? "text-ink" : "text-mist-400 hover:text-ink"
                   )}
                 >
                   {link.label}
                   {active && (
                     <motion.span
                       layoutId="nav-active"
-                      className="absolute inset-0 -z-10 rounded-full bg-white/[0.07]"
+                      className="absolute inset-0 -z-10 rounded-full bg-ink/[0.07]"
                       transition={{ type: "spring", stiffness: 350, damping: 30 }}
                     />
                   )}
@@ -82,7 +82,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex size-10 items-center justify-center rounded-full glass text-white lg:hidden"
+          className="inline-flex size-10 items-center justify-center rounded-full glass text-ink lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
@@ -107,8 +107,8 @@ export default function Navbar() {
                     className={cn(
                       "block rounded-xl px-4 py-3 text-base font-medium transition-colors",
                       pathname === link.href
-                        ? "bg-white/[0.07] text-white"
-                        : "text-mist-300 hover:bg-white/[0.05] hover:text-white"
+                        ? "bg-ink/[0.07] text-ink"
+                        : "text-mist-300 hover:bg-ink/[0.05] hover:text-ink"
                     )}
                   >
                     {link.label}

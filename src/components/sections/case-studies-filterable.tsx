@@ -30,7 +30,7 @@ function FilterPill({
         "rounded-full px-4 py-2 text-sm font-medium transition-all duration-200",
         active
           ? "bg-gradient-to-r from-electric-500 to-cyan-500 text-white shadow-glow"
-          : "glass text-mist-400 hover:text-white"
+          : "glass text-mist-400 hover:text-ink"
       )}
     >
       {children}

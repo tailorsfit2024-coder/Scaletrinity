@@ -22,7 +22,7 @@ export function Accordion({
   const [openIndex, setOpenIndex] = useState<number | null>(defaultOpenIndex ?? 0);
 
   return (
-    <div className={cn("flex flex-col divide-y divide-white/[0.07]", className)}>
+    <div className={cn("flex flex-col divide-y divide-ink/[0.07]", className)}>
       {items.map((item, index) => {
         const open = openIndex === index;
         return (
@@ -33,7 +33,7 @@ export function Accordion({
               aria-expanded={open}
               className="flex w-full items-center justify-between gap-6 py-6 text-left"
             >
-              <span className="font-display text-base font-semibold text-white sm:text-lg">
+              <span className="font-display text-base font-semibold text-ink sm:text-lg">
                 {item.question}
               </span>
               <span className="flex size-8 shrink-0 items-center justify-center rounded-full glass text-cyan-300">

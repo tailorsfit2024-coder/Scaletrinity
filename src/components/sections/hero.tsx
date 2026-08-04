@@ -34,11 +34,11 @@ export function Hero() {
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
         <motion.div
           style={{ x: blobOneX, y: blobOneY }}
-          className="absolute -top-32 left-[10%] size-[30rem] rounded-full bg-electric-600/25 blur-[120px]"
+          className="absolute -top-32 left-[10%] size-[30rem] rounded-full bg-electric-600/10 blur-[120px]"
         />
         <motion.div
           style={{ x: blobTwoX, y: blobTwoY }}
-          className="absolute top-1/4 -right-24 size-[26rem] rounded-full bg-cyan-500/20 blur-[130px]"
+          className="absolute top-1/4 -right-24 size-[26rem] rounded-full bg-cyan-500/10 blur-[130px]"
         />
         <div className="bg-grid absolute inset-0 opacity-[0.35] [mask-image:radial-gradient(ellipse_65%_55%_at_50%_10%,black,transparent)]" />
         <div className="bg-noise absolute inset-0" />
@@ -51,7 +51,7 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <h1 className="font-display text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
+            <h1 className="font-display text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">
               Scale Smarter.
               <br />
               Grow Faster.

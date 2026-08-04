@@ -34,7 +34,7 @@ export function NewsletterForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="you@brand.com"
-        className="w-full rounded-full border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder:text-mist-500 outline-none transition-colors focus:border-electric-400"
+        className="w-full rounded-full border border-ink/10 bg-ink/[0.04] px-4 py-2.5 text-sm text-ink placeholder:text-mist-500 outline-none transition-colors focus:border-electric-400"
       />
       <button
         type="submit"

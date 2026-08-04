@@ -15,8 +15,8 @@ const variantClasses: Record<NonNullable<ButtonBaseProps["variant"]>, string> = 
   primary:
     "bg-gradient-to-r from-electric-500 to-cyan-500 text-white shadow-glow hover:shadow-glow-cyan hover:brightness-110",
   secondary:
-    "glass text-mist-100 hover:bg-white/[0.08] hover:border-white/20",
-  ghost: "text-mist-200 hover:text-white",
+    "glass text-mist-100 hover:bg-ink/[0.08] hover:border-ink/20",
+  ghost: "text-mist-200 hover:text-ink",
 };
 
 const sizeClasses: Record<NonNullable<ButtonBaseProps["size"]>, string> = {

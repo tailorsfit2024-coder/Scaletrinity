@@ -53,11 +53,11 @@ export function WhyChooseUs() {
         <RevealGroup className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {reasons.map((reason) => (
             <RevealItem key={reason.title}>
-              <div className="group h-full rounded-2xl glass p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-glow">
+              <div className="group h-full rounded-2xl glass p-6 transition-all duration-300 hover:-translate-y-1 hover:border-ink/20 hover:shadow-glow">
                 <span className="inline-flex size-11 items-center justify-center rounded-xl bg-gradient-to-br from-electric-500/20 to-cyan-500/20 text-cyan-300 transition-colors group-hover:text-cyan-200">
                   <reason.icon className="size-5" />
                 </span>
-                <h3 className="mt-4 font-display text-base font-bold text-white">{reason.title}</h3>
+                <h3 className="mt-4 font-display text-base font-bold text-ink">{reason.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-mist-400">{reason.description}</p>
               </div>
             </RevealItem>

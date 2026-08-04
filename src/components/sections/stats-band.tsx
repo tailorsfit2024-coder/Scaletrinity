@@ -10,11 +10,11 @@ const stats = [
 
 export function StatsBand() {
   return (
-    <section className="relative border-y border-white/[0.06] bg-navy-900/40 py-14">
+    <section className="relative border-y border-ink/[0.06] bg-navy-900/40 py-14">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 lg:grid-cols-4 lg:px-8">
         {stats.map((stat, i) => (
           <Reveal key={stat.label} delay={i * 0.08} className="text-center">
-            <p className="font-display text-3xl font-bold text-white sm:text-4xl">
+            <p className="font-display text-3xl font-bold text-ink sm:text-4xl">
               <Counter
                 end={stat.end}
                 prefix={stat.prefix}

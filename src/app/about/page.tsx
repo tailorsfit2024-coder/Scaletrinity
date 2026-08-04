@@ -52,7 +52,7 @@ export default function AboutPage() {
               </span>
             </Reveal>
             <Reveal delay={0.06}>
-              <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              <h2 className="font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
                 Built by operators who scaled marketplaces from the inside.
               </h2>
             </Reveal>
@@ -88,7 +88,7 @@ export default function AboutPage() {
                     <principle.icon className="size-5" />
                   </span>
                   <div>
-                    <h3 className="font-display text-base font-bold text-white">
+                    <h3 className="font-display text-base font-bold text-ink">
                       {principle.title}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-mist-400">
@@ -113,7 +113,7 @@ export default function AboutPage() {
             </span>
           </Reveal>
           <Reveal delay={0.06}>
-            <h2 className="mt-4 font-display text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="mt-4 font-display text-3xl font-bold text-ink sm:text-4xl">
               We&apos;re always looking for senior marketplace operators.
             </h2>
           </Reveal>

@@ -5,7 +5,7 @@ const platforms = ["Amazon", "Shopify", "TikTok Shop", "Google Ads", "Meta Ads"]
 export function TrustBar() {
   const loop = [...platforms, ...platforms];
   return (
-    <section className="relative border-y border-white/[0.06] bg-navy-900/60 py-10">
+    <section className="relative border-y border-ink/[0.06] bg-navy-900/60 py-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <Reveal>
           <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-mist-500">
@@ -18,7 +18,7 @@ export function TrustBar() {
           {loop.map((name, i) => (
             <span
               key={`${name}-${i}`}
-              className="font-display text-xl font-bold tracking-tight whitespace-nowrap text-mist-500/70 transition-colors hover:text-white sm:text-2xl"
+              className="font-display text-xl font-bold tracking-tight whitespace-nowrap text-mist-500/70 transition-colors hover:text-ink sm:text-2xl"
             >
               {name}
             </span>

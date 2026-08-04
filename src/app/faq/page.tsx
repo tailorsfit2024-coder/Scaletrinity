@@ -28,7 +28,7 @@ export default function FaqPage() {
           <div className="flex flex-col gap-14">
             {faqCategories.map((category, i) => (
               <Reveal key={category.category} delay={i * 0.04}>
-                <h2 className="font-display text-xl font-bold text-white sm:text-2xl">
+                <h2 className="font-display text-xl font-bold text-ink sm:text-2xl">
                   {category.category}
                 </h2>
                 <div className="mt-4 rounded-3xl glass px-6 sm:px-10">

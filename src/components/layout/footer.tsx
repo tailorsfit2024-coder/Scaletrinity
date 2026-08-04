@@ -46,7 +46,7 @@ const columns = [
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/[0.06] bg-navy-950">
+    <footer className="relative border-t border-ink/[0.06] bg-navy-950">
       <div className="bg-grid pointer-events-none absolute inset-0 opacity-[0.4] [mask-image:linear-gradient(to_bottom,black,transparent)]" />
       <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
@@ -62,7 +62,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="ScaleTrinity on LinkedIn"
-                className="inline-flex size-10 items-center justify-center rounded-full glass text-mist-300 transition-colors hover:text-white"
+                className="inline-flex size-10 items-center justify-center rounded-full glass text-mist-300 transition-colors hover:text-ink"
               >
                 <LinkedinIcon className="size-4" />
               </a>
@@ -71,14 +71,14 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="ScaleTrinity on Instagram"
-                className="inline-flex size-10 items-center justify-center rounded-full glass text-mist-300 transition-colors hover:text-white"
+                className="inline-flex size-10 items-center justify-center rounded-full glass text-mist-300 transition-colors hover:text-ink"
               >
                 <InstagramIcon className="size-4" />
               </a>
               <a
                 href="mailto:hello@scaletrinity.com"
                 aria-label="Email ScaleTrinity"
-                className="inline-flex size-10 items-center justify-center rounded-full glass text-mist-300 transition-colors hover:text-white"
+                className="inline-flex size-10 items-center justify-center rounded-full glass text-mist-300 transition-colors hover:text-ink"
               >
                 <Mail className="size-4" />
               </a>
@@ -87,7 +87,7 @@ export default function Footer() {
 
           {columns.map((col) => (
             <div key={col.title}>
-              <h3 className="font-display text-sm font-semibold text-white">{col.title}</h3>
+              <h3 className="font-display text-sm font-semibold text-ink">{col.title}</h3>
               <ul className="mt-4 space-y-3">
                 {col.links.map((link) => (
                   <li key={link.label}>
@@ -104,9 +104,9 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col gap-6 border-t border-white/[0.06] pt-8 lg:flex-row lg:items-center lg:justify-between">
+        <div className="mt-14 flex flex-col gap-6 border-t border-ink/[0.06] pt-8 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <h3 className="font-display text-sm font-semibold text-white">
+            <h3 className="font-display text-sm font-semibold text-ink">
               Growth insights, straight to your inbox
             </h3>
             <p className="mt-1 text-sm text-mist-500">

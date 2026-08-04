@@ -6,7 +6,7 @@ export function MapPlaceholder() {
       <div className="bg-grid absolute inset-0 opacity-40" />
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(61,107,255,0.28),transparent_55%)]"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(61,107,255,0.14),transparent_55%)]"
       />
       <div className="relative flex flex-col items-center gap-3 text-center">
         <span className="relative flex size-14 items-center justify-center">
@@ -15,7 +15,7 @@ export function MapPlaceholder() {
             <MapPin className="size-6 text-white" />
           </span>
         </span>
-        <p className="font-display text-sm font-semibold text-white">Remote-First · Global Reach</p>
+        <p className="font-display text-sm font-semibold text-ink">Remote-First · Global Reach</p>
         <p className="max-w-[220px] text-xs text-mist-500">
           Interactive map placeholder — embed your live office/service map here.
         </p>

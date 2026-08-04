@@ -17,7 +17,7 @@ export function ServicePillarSection({
     <section
       id={pillar.id}
       className={cn(
-        "scroll-mt-24 border-b border-white/[0.06] py-20 sm:py-24",
+        "scroll-mt-24 border-b border-ink/[0.06] py-20 sm:py-24",
         reversed ? "bg-navy-900/40" : "bg-navy-950"
       )}
     >
@@ -28,7 +28,7 @@ export function ServicePillarSection({
               <Eyebrow>{pillar.tagline}</Eyebrow>
             </Reveal>
             <Reveal delay={0.08}>
-              <h2 className="mt-5 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              <h2 className="mt-5 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
                 {pillar.name} Growth Services
               </h2>
             </Reveal>
@@ -52,7 +52,7 @@ export function ServicePillarSection({
           >
             {pillar.services.map((service) => (
               <RevealItem key={service}>
-                <div className="flex items-center gap-3 rounded-xl glass px-4 py-3.5 transition-colors hover:border-white/20">
+                <div className="flex items-center gap-3 rounded-xl glass px-4 py-3.5 transition-colors hover:border-ink/20">
                   <CheckCircle2 className="size-4 shrink-0 text-cyan-400" />
                   <span className="text-sm text-mist-200">{service}</span>
                 </div>

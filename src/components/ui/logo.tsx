@@ -23,7 +23,7 @@ export function Logo({ className, iconOnly = false }: { className?: string; icon
         <circle cx="21.8" cy="21.5" r="2.6" fill="url(#st-grad)" />
       </svg>
       {!iconOnly && (
-        <span className="font-display text-lg font-bold tracking-tight text-white">
+        <span className="font-display text-lg font-bold tracking-tight text-ink">
           Scale<span className="text-gradient-accent">Trinity</span>
         </span>
       )}

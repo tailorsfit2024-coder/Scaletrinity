@@ -21,12 +21,12 @@ export function TeamGrid() {
         <RevealGroup className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4" stagger={0.08}>
           {roles.map((member) => (
             <RevealItem key={member.role}>
-              <div className="flex flex-col items-center gap-4 rounded-3xl glass p-8 text-center transition-colors hover:border-white/20">
-                <div className="flex size-20 items-center justify-center rounded-full bg-gradient-to-br from-electric-500/25 to-cyan-500/25 font-display text-2xl font-bold text-white">
+              <div className="flex flex-col items-center gap-4 rounded-3xl glass p-8 text-center transition-colors hover:border-ink/20">
+                <div className="flex size-20 items-center justify-center rounded-full bg-gradient-to-br from-electric-500/25 to-cyan-500/25 font-display text-2xl font-bold text-ink">
                   ST
                 </div>
                 <div>
-                  <p className="font-display text-sm font-bold text-white">{member.role}</p>
+                  <p className="font-display text-sm font-bold text-ink">{member.role}</p>
                   <p className="mt-1 text-xs text-mist-500">{member.focus}</p>
                 </div>
                 <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-mist-600">

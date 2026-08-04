@@ -48,7 +48,7 @@ export default function ContactPage() {
           <Reveal>
             <div className="flex h-full flex-col justify-between gap-8 rounded-3xl glass p-8 sm:p-10">
               <div>
-                <h2 className="font-display text-2xl font-bold text-white">Get in Touch</h2>
+                <h2 className="font-display text-2xl font-bold text-ink">Get in Touch</h2>
                 <p className="mt-3 text-sm leading-relaxed text-mist-400">
                   Reach us directly, or book a strategy call with a senior growth lead.
                 </p>
@@ -60,7 +60,7 @@ export default function ContactPage() {
                       href={method.href}
                       target={method.href.startsWith("http") ? "_blank" : undefined}
                       rel={method.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="group flex items-center gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.02] px-5 py-4 transition-colors hover:border-white/20 hover:bg-white/[0.05]"
+                      className="group flex items-center gap-4 rounded-2xl border border-ink/[0.07] bg-ink/[0.02] px-5 py-4 transition-colors hover:border-ink/20 hover:bg-ink/[0.05]"
                     >
                       <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-electric-500/20 to-cyan-500/20 text-cyan-300">
                         <method.icon className="size-4" />
@@ -69,7 +69,7 @@ export default function ContactPage() {
                         <p className="text-xs font-semibold uppercase tracking-wide text-mist-500">
                           {method.label}
                         </p>
-                        <p className="text-sm font-medium text-white">{method.value}</p>
+                        <p className="text-sm font-medium text-ink">{method.value}</p>
                       </div>
                     </a>
                   ))}

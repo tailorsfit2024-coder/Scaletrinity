@@ -17,7 +17,7 @@ export function ProcessTimeline({ compact = false }: { compact?: boolean }) {
 
   return (
     <div ref={containerRef} className="relative mx-auto max-w-4xl">
-      <div className="absolute left-[27px] top-2 bottom-2 w-px bg-white/10 sm:left-[31px]">
+      <div className="absolute left-[27px] top-2 bottom-2 w-px bg-ink/10 sm:left-[31px]">
         <motion.div
           style={{ scaleY: lineHeight }}
           className="h-full w-full origin-top bg-gradient-to-b from-electric-400 to-cyan-400"
@@ -39,7 +39,7 @@ export function ProcessTimeline({ compact = false }: { compact?: boolean }) {
               <button
                 type="button"
                 onClick={() => setActive(isActive ? -1 : i)}
-                className="absolute left-0 top-0 flex size-14 items-center justify-center rounded-2xl glass-strong font-display text-lg font-bold text-white transition-all duration-300 sm:size-16"
+                className="absolute left-0 top-0 flex size-14 items-center justify-center rounded-2xl glass-strong font-display text-lg font-bold text-ink transition-all duration-300 sm:size-16"
                 style={
                   isActive
                     ? { boxShadow: "0 0 0 1px rgba(111,227,245,0.4), 0 12px 30px -10px rgba(111,227,245,0.5)" }
@@ -55,12 +55,12 @@ export function ProcessTimeline({ compact = false }: { compact?: boolean }) {
                 className={cn(
                   "cursor-pointer rounded-2xl border px-6 py-5 transition-all duration-300",
                   isActive
-                    ? "border-white/20 bg-white/[0.05]"
-                    : "border-white/[0.06] bg-white/[0.015] hover:border-white/12 hover:bg-white/[0.03]"
+                    ? "border-ink/20 bg-ink/[0.05]"
+                    : "border-ink/[0.06] bg-ink/[0.015] hover:border-ink/12 hover:bg-ink/[0.03]"
                 )}
               >
                 <div className="flex items-center justify-between gap-4">
-                  <h3 className="font-display text-lg font-bold text-white sm:text-xl">
+                  <h3 className="font-display text-lg font-bold text-ink sm:text-xl">
                     {step.title}
                   </h3>
                 </div>
@@ -75,7 +75,7 @@ export function ProcessTimeline({ compact = false }: { compact?: boolean }) {
                     transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <ul className="mt-4 flex flex-col gap-2 border-t border-white/[0.07] pt-4">
+                    <ul className="mt-4 flex flex-col gap-2 border-t border-ink/[0.07] pt-4">
                       {step.deliverables.map((d) => (
                         <li key={d} className="flex items-start gap-2 text-sm text-mist-300">
                           <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-cyan-400" />

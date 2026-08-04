@@ -39,7 +39,7 @@ export function HeroDashboard() {
             <p className="text-xs font-semibold uppercase tracking-wide text-mist-500">
               Blended Revenue
             </p>
-            <p className="mt-1 font-display text-3xl font-bold text-white">$1.84M</p>
+            <p className="mt-1 font-display text-3xl font-bold text-ink">$1.84M</p>
           </div>
           <span className="flex items-center gap-1 rounded-full bg-cyan-500/15 px-3 py-1.5 text-xs font-semibold text-cyan-300">
             <TrendingUp className="size-3.5" />
@@ -52,14 +52,14 @@ export function HeroDashboard() {
             <AreaChart data={chartData} margin={{ top: 6, right: 0, left: 0, bottom: 0 }}>
               <defs>
                 <linearGradient id="hero-fill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#6FE3F5" stopOpacity={0.55} />
+                  <stop offset="0%" stopColor="#3D6BFF" stopOpacity={0.35} />
                   <stop offset="100%" stopColor="#3D6BFF" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <Area
                 type="monotone"
                 dataKey="v"
-                stroke="#6FE3F5"
+                stroke="#3D6BFF"
                 strokeWidth={2.5}
                 fill="url(#hero-fill)"
                 isAnimationActive
@@ -69,7 +69,7 @@ export function HeroDashboard() {
           </ResponsiveContainer>
         </div>
 
-        <div className="mt-4 grid grid-cols-3 gap-3 border-t border-white/[0.08] pt-4">
+        <div className="mt-4 grid grid-cols-3 gap-3 border-t border-ink/[0.08] pt-4">
           {[
             { label: "Amazon", value: "+96%" },
             { label: "Shopify", value: "+84%" },
@@ -79,7 +79,7 @@ export function HeroDashboard() {
               <p className="text-[10px] font-semibold uppercase tracking-wide text-mist-500">
                 {row.label}
               </p>
-              <p className="mt-1 font-display text-sm font-bold text-white">{row.value}</p>
+              <p className="mt-1 font-display text-sm font-bold text-ink">{row.value}</p>
             </div>
           ))}
         </div>
@@ -96,7 +96,7 @@ export function HeroDashboard() {
           <span className="flex size-8 items-center justify-center rounded-full bg-gradient-to-r from-electric-500 to-cyan-500">
             <Icon className="size-4 text-white" />
           </span>
-          <span className="text-xs font-semibold text-white">{label}</span>
+          <span className="text-xs font-semibold text-ink">{label}</span>
         </motion.div>
       ))}
     </div>

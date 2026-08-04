@@ -7,7 +7,7 @@ export function LegalSection({
 }) {
   return (
     <div>
-      <h2 className="font-display text-xl font-bold text-white">{title}</h2>
+      <h2 className="font-display text-xl font-bold text-ink">{title}</h2>
       <div className="mt-3 space-y-3 text-sm leading-relaxed text-mist-400 sm:text-base">
         {children}
       </div>

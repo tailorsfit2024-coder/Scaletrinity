@@ -4,8 +4,8 @@ import type { Industry } from "@/data/industries";
 
 export function IndustryCard({ industry }: { industry: Industry }) {
   return (
-    <div className="group flex h-full flex-col rounded-3xl glass p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:shadow-glow">
-      <h3 className="font-display text-xl font-bold text-white sm:text-2xl">{industry.name}</h3>
+    <div className="group flex h-full flex-col rounded-3xl glass p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-ink/20 hover:shadow-glow">
+      <h3 className="font-display text-xl font-bold text-ink sm:text-2xl">{industry.name}</h3>
       <p className="mt-3 text-sm leading-relaxed text-mist-400 sm:text-base">
         {industry.description}
       </p>
@@ -21,7 +21,7 @@ export function IndustryCard({ industry }: { industry: Industry }) {
 
       <Link
         href={`/case-studies?industry=${encodeURIComponent(industry.name.split(" ")[0])}`}
-        className="mt-8 flex items-center gap-1.5 text-sm font-semibold text-white"
+        className="mt-8 flex items-center gap-1.5 text-sm font-semibold text-ink"
       >
         View {industry.name} Case Studies
         <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />

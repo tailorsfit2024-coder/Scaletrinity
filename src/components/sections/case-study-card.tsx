@@ -13,8 +13,8 @@ const kpiLabels: { key: keyof CaseStudy["kpis"]; label: string }[] = [
 
 export function CaseStudyCard({ study }: { study: CaseStudy }) {
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-3xl glass transition-all duration-300 hover:border-white/20 hover:shadow-glow">
-      <div className="flex items-center justify-between gap-3 border-b border-white/[0.07] px-6 py-4 sm:px-8">
+    <div className="flex h-full flex-col overflow-hidden rounded-3xl glass transition-all duration-300 hover:border-ink/20 hover:shadow-glow">
+      <div className="flex items-center justify-between gap-3 border-b border-ink/[0.07] px-6 py-4 sm:px-8">
         <div className="flex flex-wrap items-center gap-2">
           <span className="rounded-full bg-electric-500/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-electric-300">
             {study.marketplace}
@@ -29,7 +29,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
       </div>
 
       <div className="flex-1 px-6 py-6 sm:px-8">
-        <h3 className="font-display text-xl font-bold text-white sm:text-2xl">{study.clientLabel}</h3>
+        <h3 className="font-display text-xl font-bold text-ink sm:text-2xl">{study.clientLabel}</h3>
 
         <div className="mt-5 space-y-4 text-sm">
           <div>
@@ -46,14 +46,14 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
           {study.servicesDelivered.map((s) => (
             <span
               key={s}
-              className="rounded-full border border-white/10 px-3 py-1 text-xs text-mist-400"
+              className="rounded-full border border-ink/10 px-3 py-1 text-xs text-mist-400"
             >
               {s}
             </span>
           ))}
         </div>
 
-        <div className="mt-6 rounded-2xl border border-white/[0.07] bg-white/[0.02] p-4">
+        <div className="mt-6 rounded-2xl border border-ink/[0.07] bg-ink/[0.02] p-4">
           <div className="mb-2 flex items-center justify-between">
             <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-mist-400">
               <TrendingUp className="size-3.5 text-cyan-400" />
@@ -65,12 +65,12 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
               <AreaChart data={study.chartData} margin={{ top: 4, right: 4, left: 4, bottom: 0 }}>
                 <defs>
                   <linearGradient id={`after-${study.slug}`} x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#6FE3F5" stopOpacity={0.5} />
-                    <stop offset="100%" stopColor="#6FE3F5" stopOpacity={0} />
+                    <stop offset="0%" stopColor="#3D6BFF" stopOpacity={0.35} />
+                    <stop offset="100%" stopColor="#3D6BFF" stopOpacity={0} />
                   </linearGradient>
                   <linearGradient id={`before-${study.slug}`} x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#4d5773" stopOpacity={0.35} />
-                    <stop offset="100%" stopColor="#4d5773" stopOpacity={0} />
+                    <stop offset="0%" stopColor="#94a3b8" stopOpacity={0.3} />
+                    <stop offset="100%" stopColor="#94a3b8" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <XAxis dataKey="month" hide />
@@ -86,14 +86,14 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
                 <Area
                   type="monotone"
                   dataKey="before"
-                  stroke="#4d5773"
+                  stroke="#94a3b8"
                   strokeWidth={2}
                   fill={`url(#before-${study.slug})`}
                 />
                 <Area
                   type="monotone"
                   dataKey="after"
-                  stroke="#6FE3F5"
+                  stroke="#3D6BFF"
                   strokeWidth={2.5}
                   fill={`url(#after-${study.slug})`}
                 />
@@ -104,19 +104,19 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
 
         <div className="mt-5 grid grid-cols-2 gap-3">
           {kpiLabels.map(({ key, label }) => (
-            <div key={key} className="rounded-xl border border-white/[0.07] bg-white/[0.02] px-4 py-3">
+            <div key={key} className="rounded-xl border border-ink/[0.07] bg-ink/[0.02] px-4 py-3">
               <p className="text-[10px] font-semibold uppercase tracking-wide text-mist-500">{label}</p>
-              <p className="mt-1 font-display text-sm font-bold text-white">{study.kpis[key]}</p>
+              <p className="mt-1 font-display text-sm font-bold text-ink">{study.kpis[key]}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-5 flex items-center gap-2 rounded-xl border border-dashed border-white/15 px-4 py-3 text-xs text-mist-500">
+        <div className="mt-5 flex items-center gap-2 rounded-xl border border-dashed border-ink/15 px-4 py-3 text-xs text-mist-500">
           <BarChart3 className="size-4 shrink-0" />
           Analytics Screenshot Placeholder — to be replaced with verified dashboard export
         </div>
 
-        <div className="mt-5 flex items-start gap-2 rounded-xl border border-white/[0.07] bg-white/[0.02] px-4 py-3">
+        <div className="mt-5 flex items-start gap-2 rounded-xl border border-ink/[0.07] bg-ink/[0.02] px-4 py-3">
           <Quote className="mt-0.5 size-4 shrink-0 text-electric-400/70" />
           <p className="text-xs italic text-mist-500">
             Client quote placeholder — to be replaced with a verified testimonial upon case study

@@ -18,7 +18,7 @@ const revenueRanges = [
 const adSpendRanges = ["Under $5K / mo", "$5K–$20K / mo", "$20K–$75K / mo", "$75K+ / mo"];
 
 const fieldClasses =
-  "w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-sm text-white placeholder:text-mist-500 outline-none transition-colors focus:border-electric-400 focus:bg-white/[0.06]";
+  "w-full rounded-xl border border-ink/10 bg-ink/[0.04] px-4 py-3.5 text-sm text-ink placeholder:text-mist-500 outline-none transition-colors focus:border-electric-400 focus:bg-ink/[0.06]";
 const labelClasses = "mb-2 block text-xs font-semibold uppercase tracking-wide text-mist-400";
 
 export function LeadForm({ compact = false }: { compact?: boolean }) {
@@ -57,7 +57,7 @@ export function LeadForm({ compact = false }: { compact?: boolean }) {
         <span className="flex size-14 items-center justify-center rounded-full bg-gradient-to-r from-electric-500 to-cyan-500">
           <CheckCircle2 className="size-7 text-white" />
         </span>
-        <h3 className="font-display text-2xl font-bold text-white">Request received.</h3>
+        <h3 className="font-display text-2xl font-bold text-ink">Request received.</h3>
         <p className="max-w-md text-mist-400">
           A ScaleTrinity growth strategist will review your brand and follow up within one
           business day to schedule your Free Growth Audit.
@@ -221,7 +221,7 @@ export function LeadFormSection() {
             <Eyebrow>Free Growth Audit</Eyebrow>
           </Reveal>
           <Reveal delay={0.08}>
-            <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl lg:text-5xl">
               Let&apos;s Scale Your Brand.
             </h2>
           </Reveal>

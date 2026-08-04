@@ -11,7 +11,7 @@ export function PageHero({
   description: React.ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden border-b border-white/[0.06] bg-navy-950 pb-20 pt-36 sm:pt-44">
+    <section className="relative overflow-hidden border-b border-ink/[0.06] bg-navy-950 pb-20 pt-36 sm:pt-44">
       <GradientBlobs className="opacity-70" />
       <div className="bg-grid pointer-events-none absolute inset-0 opacity-[0.35] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_0%,black,transparent)]" />
       <div className="relative mx-auto flex max-w-4xl flex-col items-center gap-6 px-6 text-center lg:px-8">
@@ -19,7 +19,7 @@ export function PageHero({
           <Eyebrow>{eyebrow}</Eyebrow>
         </Reveal>
         <Reveal delay={0.08}>
-          <h1 className="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
             {title}
           </h1>
         </Reveal>
