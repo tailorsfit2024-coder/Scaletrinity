@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Quote } from "lucide-react";
 import type { Testimonial } from "@/data/testimonials";
 
@@ -11,9 +12,18 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
         </p>
       </div>
       <div className="mt-8 flex items-center justify-between border-t border-ink/[0.07] pt-5">
-        <div>
-          <p className="font-display text-sm font-semibold text-ink">{testimonial.name}</p>
-          <p className="text-xs text-mist-500">{testimonial.role}</p>
+        <div className="flex items-center gap-3">
+          <Image
+            src={testimonial.avatar}
+            alt={testimonial.name}
+            width={40}
+            height={40}
+            className="size-10 shrink-0 rounded-full object-cover ring-1 ring-ink/[0.08]"
+          />
+          <div>
+            <p className="font-display text-sm font-semibold text-ink">{testimonial.name}</p>
+            <p className="text-xs text-mist-500">{testimonial.role}</p>
+          </div>
         </div>
         <span className="rounded-full glass px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-cyan-300">
           {testimonial.marketplace}
