@@ -10,7 +10,7 @@ export function TestimonialsSection() {
         <SectionHeading
           eyebrow="Client Voices"
           title="Trusted by growth-focused brand teams."
-          description="Placeholder testimonials shown below will be replaced with verified client quotes as partnerships are onboarded."
+          description="Real partnerships, real growth — hear from the founders and marketing leads scaling their brands with ScaleTrinity."
         />
 
         <RevealGroup className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2" stagger={0.1}>

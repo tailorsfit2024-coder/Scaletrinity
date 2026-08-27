@@ -29,9 +29,6 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
           {testimonial.marketplace}
         </span>
       </div>
-      <span className="mt-4 block text-center text-[10px] font-semibold uppercase tracking-[0.15em] text-mist-600">
-        Placeholder Testimonial
-      </span>
     </div>
   );
 }
