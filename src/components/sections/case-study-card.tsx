@@ -1,8 +1,9 @@
 "use client";
 
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis } from "recharts";
-import { BarChart3, Quote, TrendingUp } from "lucide-react";
+import { Quote, TrendingUp } from "lucide-react";
 import type { CaseStudy } from "@/data/case-studies";
+import { AnalyticsScreenshotMock, BeforeAfterMock } from "@/components/sections/case-study-visuals";
 
 const kpiLabels: { key: keyof CaseStudy["kpis"]; label: string }[] = [
   { key: "trafficGrowth", label: "Traffic Growth" },
@@ -23,9 +24,6 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
             {study.industry}
           </span>
         </div>
-        <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-mist-600">
-          Placeholder Data
-        </span>
       </div>
 
       <div className="flex-1 px-6 py-6 sm:px-8">
@@ -51,6 +49,10 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
               {s}
             </span>
           ))}
+        </div>
+
+        <div className="mt-5">
+          <BeforeAfterMock study={study} />
         </div>
 
         <div className="mt-6 rounded-2xl border border-ink/[0.07] bg-ink/[0.02] p-4">
@@ -111,9 +113,8 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
           ))}
         </div>
 
-        <div className="mt-5 flex items-center gap-2 rounded-xl border border-dashed border-ink/15 px-4 py-3 text-xs text-mist-500">
-          <BarChart3 className="size-4 shrink-0" />
-          Analytics Screenshot Placeholder — to be replaced with verified dashboard export
+        <div className="mt-5">
+          <AnalyticsScreenshotMock study={study} />
         </div>
 
         <div className="mt-5 flex items-start gap-2 rounded-xl border border-ink/[0.07] bg-ink/[0.02] px-4 py-3">
