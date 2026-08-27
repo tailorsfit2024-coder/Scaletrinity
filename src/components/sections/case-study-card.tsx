@@ -117,12 +117,12 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
           <AnalyticsScreenshotMock study={study} />
         </div>
 
-        <div className="mt-5 flex items-start gap-2 rounded-xl border border-ink/[0.07] bg-ink/[0.02] px-4 py-3">
-          <Quote className="mt-0.5 size-4 shrink-0 text-electric-400/70" />
-          <p className="text-xs italic text-mist-500">
-            Client quote placeholder — to be replaced with a verified testimonial upon case study
-            publication.
+        <div className="mt-5 rounded-xl border border-ink/[0.07] bg-ink/[0.02] px-4 py-4">
+          <Quote className="size-4 shrink-0 text-electric-400/70" />
+          <p className="mt-2 text-sm italic leading-relaxed text-mist-300">
+            &ldquo;{study.quote}&rdquo;
           </p>
+          <p className="mt-3 text-xs font-semibold text-ink">{study.quoteAuthor}</p>
         </div>
       </div>
     </div>

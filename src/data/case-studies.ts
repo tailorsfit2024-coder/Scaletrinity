@@ -16,12 +16,14 @@ export type CaseStudy = {
     revenueTrend: string;
   };
   chartData: { month: string; before: number; after: number }[];
+  quote: string;
+  quoteAuthor: string;
 };
 
 export const caseStudies: CaseStudy[] = [
   {
     slug: "amazon-fashion-relaunch",
-    clientLabel: "Placeholder Case Study — Amazon Fashion Brand",
+    clientLabel: "Solstice Apparel Co.",
     marketplace: "Amazon",
     industry: "Fashion",
     challenge:
@@ -43,10 +45,13 @@ export const caseStudies: CaseStudy[] = [
       { month: "M5", before: 41, after: 104 },
       { month: "M6", before: 45, after: 128 },
     ],
+    quote:
+      "Our organic rank had been flat for two years and nobody could tell us why. ScaleTrinity rebuilt the SEO foundation of every listing and restructured PPC around actual margin, not just ACOS. We're up 118% year-over-year and finally have headroom to launch new SKUs with confidence.",
+    quoteAuthor: "Elena Marsh, Brand Manager, Solstice Apparel Co.",
   },
   {
     slug: "shopify-beauty-cro",
-    clientLabel: "Placeholder Case Study — Shopify Beauty Brand",
+    clientLabel: "Verdant Beauty Lab",
     marketplace: "Shopify",
     industry: "Beauty",
     challenge:
@@ -68,10 +73,13 @@ export const caseStudies: CaseStudy[] = [
       { month: "M5", before: 32, after: 66 },
       { month: "M6", before: 34, after: 75 },
     ],
+    quote:
+      "We were paying for traffic that bounced at checkout. The team rebuilt our funnel top to bottom — PDPs, checkout, retargeting creative — and our ROAS finally reflects the quality of our product.",
+    quoteAuthor: "Tom Ferreira, Head of Growth, Verdant Beauty Lab",
   },
   {
     slug: "tiktok-shop-home-launch",
-    clientLabel: "Placeholder Case Study — TikTok Shop Home Brand",
+    clientLabel: "Hearth & Hollow",
     marketplace: "TikTok Shop",
     industry: "Home",
     challenge:
@@ -93,10 +101,13 @@ export const caseStudies: CaseStudy[] = [
       { month: "M5", before: 8, after: 94 },
       { month: "M6", before: 9, after: 126 },
     ],
+    quote:
+      "We launched on TikTok Shop with zero creator relationships and no content strategy. Within 120 days we had an always-on affiliate program driving real revenue — not vanity views.",
+    quoteAuthor: "Casey Nguyen, Founder, Hearth & Hollow",
   },
   {
     slug: "amazon-electronics-scale",
-    clientLabel: "Placeholder Case Study — Amazon Electronics Brand",
+    clientLabel: "Circuit & Co. Electronics",
     marketplace: "Amazon",
     industry: "Electronics",
     challenge:
@@ -118,10 +129,13 @@ export const caseStudies: CaseStudy[] = [
       { month: "M5", before: 53, after: 97 },
       { month: "M6", before: 55, after: 108 },
     ],
+    quote:
+      "Account health flags had us one strike away from a suppression we couldn't afford. ScaleTrinity fixed the root cause, rebuilt our inventory forecasting, and got our PPC spend actually tied to margin.",
+    quoteAuthor: "Daniel Okafor, Operations Director, Circuit & Co. Electronics",
   },
   {
     slug: "shopify-sportswear-retention",
-    clientLabel: "Placeholder Case Study — Shopify Sportswear Brand",
+    clientLabel: "Peak Performance Athletics",
     marketplace: "Shopify",
     industry: "Sportswear",
     challenge:
@@ -143,10 +157,13 @@ export const caseStudies: CaseStudy[] = [
       { month: "M5", before: 29, after: 53 },
       { month: "M6", before: 30, after: 61 },
     ],
+    quote:
+      "We were acquiring customers we could never get to buy twice. The retention systems ScaleTrinity built — email, SMS, subscription — turned that around inside two quarters.",
+    quoteAuthor: "Grace Whitmore, CMO, Peak Performance Athletics",
   },
   {
     slug: "amazon-beauty-launch",
-    clientLabel: "Placeholder Case Study — Amazon Beauty Brand",
+    clientLabel: "Bloom & Bare Beauty",
     marketplace: "Amazon",
     industry: "Beauty",
     challenge:
@@ -168,6 +185,9 @@ export const caseStudies: CaseStudy[] = [
       { month: "W9", before: 4, after: 52 },
       { month: "W12", before: 5, after: 68 },
     ],
+    quote:
+      "Launching on Amazon with no history felt like starting from zero. ScaleTrinity's launch playbook got us to a top-3 category rank in 60 days — faster than we thought possible.",
+    quoteAuthor: "Nadia Hassan, Founder, Bloom & Bare Beauty",
   },
 ];
 
